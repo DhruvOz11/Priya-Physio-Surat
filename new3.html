@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Priya Physio & Fitness" />
+  <meta property="og:description"
+    content="Best physiotherapist in Surat. Specialized in treating Back Pain, Tennis Elbow Lumbar Radiculopathy ,Neck Pain (Cervical Radiculopathy) ,Sciatica Treatment ,Frozen Shoulder, Knee Pain & ACL/PCL Injuries" />
+  <meta property="og:url" content="https://priyaphysio.co.in/" />
+  <meta property="og:image" content="https://priyaphysio.co.in/preview2.png" />
+  <meta property="og:type" content="website" />
+  <title>Dr. Priya Nathani (PT) - Expert Physiotherapist</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://priyaphysio.co.in/favicon.ico" />
+  <link rel="icon" sizes="16x16" href="https://priyaphysio.co.in/favicon2.png" />
+  <link rel="icon" sizes="192x192" href="https://priyaphysio.co.in/logo192.png" />
+  <meta name="msapplication-TileImage" content="https://priyaphysio.co.in/logo192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0a192f;
+      /* Deep Navy Medical */
+      --accent: #D4AF37;
+      /* Luxury Gold */
+      --medical-blue: #0077B6;
+      --text-dark: #1d1d1f;
+      --text-muted: #6e6e73;
+      --bg-soft: #fbfbfd;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* --- Sophisticated Navbar --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo img {
+      height: 4rem;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover img {
+      transform: scale(1.05);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--medical-blue);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+      border: none;
+      background: none;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 2px;
+      background: var(--primary);
+      transition: 0.3s;
+    }
+
+    /* --- Premium Hero Section --- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(10, 25, 47, 0.7) 0%, rgba(10, 25, 47, 0.9) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      color: var(--primary);
+      padding: 18px 40px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    /* --- Service Cards --- */
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      transform: translateY(-10px);
+      border-color: var(--accent);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--medical-blue);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .service-list li {
+      padding: 0.6rem 0;
+      color: var(--text-muted);
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.95rem;
+    }
+
+    .service-list li:last-child {
+      border: none;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128c7e;
+      transform: scale(1.02);
+    }
+
+    /* --- About Section (With Restored Data) --- */
+    .about-section {
+      background: var(--bg-soft);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .credentials-box {
+      margin-top: 2rem;
+      background: var(--primary);
+      color: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .credentials-box h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .credentials-box ul {
+      list-style: none;
+    }
+
+    .credentials-box li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* --- Image Grids --- */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .img-card {
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .img-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .img-card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* --- Lightbox Modal --- */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 25, 47, 0.98);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 4px;
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* --- Floating Elements --- */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    /* --- Mobile Menu Fix --- */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        transition: 0.4s;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="Dr Priya Physio & Fitness"
+          onerror="this.src='https://priyaphysio.co.in/favicon2.png'" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">The Doctor</a></li>
+        <li><a href="#certificates">Credentials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source
+        src="https://assets.mixkit.co/videos/preview/mixkit-doctor-performing-a-physical-exam-on-a-patient-40505-large.mp4"
+        type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="serif">Advanced Physical Recovery & Fitness</h1>
+      <p>Specialized treatments in Neurological, Orthopedic, and Cardio-Pulmonary Rehabilitation by Dr. Priya Nathani
+        (PT).</p>
+      <a href="https://wa.me/917069742782" class="cta-btn">Book Appointment <i class="fas fa-calendar-check"></i></a>
+    </div>
+  </section>
+
+  <section class="section-padding" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Expert Specialties</h2>
+        <p>Comprehensive rehabilitation designed for your specific health needs.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-brain"></i>
+          <h3>Neurological Rehab</h3>
+          <ul class="service-list">
+            <li>Paralysis (Stroke, Hemiplegia)</li>
+            <li>Guillain Barre Syndrome</li>
+            <li>Multiple Sclerosis</li>
+            <li>Cerebral Palsy</li>
+            <li>Parkinson's Disease</li>
+            <li>Spinal Cord Injuries</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20neurological%20physiotherapy%20treatment"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Get Neurological Care
+          </a>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-bone"></i>
+          <h3>Orthopedic Treatment</h3>
+          <ul class="service-list">
+            <li>Back Pain & Sciatica</li>
+            <li>Neck Pain (Cervical Radiculopathy)</li>
+            <li>Frozen Shoulder & Tennis Elbow</li>
+            <li>Knee Pain & ACL/PCL Rehab</li>
+            <li>Joint Replacement Recovery</li>
+            <li>Lumbar Radiculopathy</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20orthopedic%20physiotherapy%20treatment"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Book Orthopedic Care
+          </a>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Cardio-Pulmonary</h3>
+          <ul class="service-list">
+            <li>Post Angioplasty Rehab</li>
+            <li>Post Open Heart Surgery</li>
+            <li>Asthma & COPD Management</li>
+            <li>Lung Fibrosis Recovery</li>
+            <li>Cardiac Strengthening</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20cardio-pulmonary%20rehabilitation"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Start Cardio Recovery
+          </a>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Fitness & Pilates</h3>
+          <ul class="service-list">
+            <li>General Fitness Training</li>
+            <li>Certified Pilates Instruction</li>
+            <li>Balance & Coordination Training</li>
+            <li>Strength & Flexibility</li>
+            <li>Cardio-Fitness Training</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I'm%20interested%20in%20fitness%20training%20and%20Pilates"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Join Fitness Program
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="https://i.ibb.co/LD8QRnHC/2025-11-17.jpg" alt="Dr. Priya Nathani">
+        </div>
+        <div class="about-content">
+          <h2 class="serif">About Dr. Priya Nathani</h2>
+          <p>Dr. Priya is a dedicated Physiotherapist and Certified Pilates Instructor focused on restoring patient
+            mobility and enhancing quality of life. She specializes in handling complex neurological cases and providing
+            high-standard orthopedic care.</p>
+
+          <div class="credentials-box">
+            <h3>Qualifications</h3>
+            <ul>
+              <li>Bachelor of Physiotherapy (BPT)</li>
+              <li>Gujarat State Physiotherapy Council Registered</li>
+              <li>Member of Indian Academy of Fitness Training</li>
+              <li>Certified Pilates Instructor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="certificates">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="serif">Certificates</h2>
+      </div>
+      <div class="image-grid">
+        <div class="img-card"><img src="https://i.ibb.co/LD8QRnHC/2025-11-17.jpg" alt="Cert"></div>
+        <div class="img-card"><img src="https://i.ibb.co/MyrbbRJt/Whats-App-Image-2026-03-30-at-1-48-10-AM-1.jpg"
+            alt="Cert"></div>
+        <div class="img-card"><img src="https://i.ibb.co/ycxtd8jy/Whats-App-Image-2026-03-30-at-1-48-11-AM-1.jpg"
+            alt="Cert"></div>
+        <div class="img-card"><img src="https://i.ibb.co/YB6kSpHX/Whats-App-Image-2026-03-30-at-1-48-11-AM.jpg"
+            alt="Cert"></div>
+        <div class="img-card"><img src="https://i.ibb.co/Kpk3r84D/2025-08-30.jpg" alt="Cert"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="serif">Photo Gallery</h2>
+      </div>
+      <div class="image-grid">
+        <div class="img-card"><img src="https://i.ibb.co/0jdxspzy/Whats-App-Image-2026-03-29-at-10-57-29-PM.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/fG1jjj2Y/Whats-App-Image-2026-03-29-at-10-57-30-PM-1.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/mVbDtvym/Whats-App-Image-2026-03-29-at-10-57-30-PM-2.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/99mHQnhk/Whats-App-Image-2026-03-29-at-10-57-30-PM.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/TMNhLK0K/Whats-App-Image-2026-03-29-at-10-57-34-PM-1.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/W4GKfNnv/Whats-App-Image-2026-03-29-at-10-57-34-PM-2.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/yDwDvpV/Whats-App-Image-2026-03-29-at-10-57-35-PM.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/DgkrY11c/Whats-App-Image-2026-03-30-at-1-48-04-AM.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/27Lzkcpd/Whats-App-Image-2026-03-30-at-1-48-10-AM.jpg"
+            alt="Gallery"></div>
+        <div class="img-card"><img src="https://i.ibb.co/674dFmNY/Whats-App-Image-2026-03-29-at-10-57-28-PM.jpg"
+            alt="Gallery"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="serif">Patient Recovery Stories</h2>
+      </div>
+      <div class="services-grid">
+        <iframe height="500" src="https://youtube.com/embed/W2cSkJlH_S0" frameborder="0" allowfullscreen
+          style="border-radius:12px;"></iframe>
+        <iframe height="500" src="https://www.youtube.com/embed/6jkRaW_Jh04" frameborder="0" allowfullscreen
+          style="border-radius:12px;"></iframe>
+        <iframe height="500" src="https://youtube.com/embed/nsswdSP6pHY" frameborder="0" allowfullscreen
+          style="border-radius:12px;"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section-padding bg-soft" id="contact" style="background-color: var(--primary); color: white;">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <h2 class="serif" style="color: var(--accent);">Contact Dr. Priya</h2>
+          <p style="margin: 2rem 0; opacity: 0.8;">Expert physiotherapy care delivered at our clinic or the comfort of
+            your home.</p>
+          <p><i class="fas fa-phone"></i> +91 70697 42782</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 7 PM</p>
+        </div>
+        <div style="text-align: right;">
+          <a href="https://wa.me/917069742782" class="cta-btn"
+            style="background: var(--accent); color: var(--primary);">Message on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-lightbox" id="closeLightbox">&times;</button>
+    <img src="" id="lightboxImg">
+  </div>
+
+  <a href="https://wa.me/917069742782" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    // Navigation Logic
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Lightbox Logic with Back Button support
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeLightbox');
+
+    const openLightbox = (src) => {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      history.pushState({ modal: true }, null, ""); // Push state for back button
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+    };
+
+    document.querySelectorAll('.img-card img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+    // Handle Phone Back Button
+    window.onpopstate = function () {
+      closeLightbox();
+    };
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) nav.style.padding = "0.5rem 0";
+      else nav.style.padding = "1rem 0";
+    });
+  </script>
+</body>
+
+</html>

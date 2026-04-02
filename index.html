@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <!-- Essential Open Graph tags -->
+  <meta property="og:title" content="Priya Physio & Fitness" />
+  <meta property="og:description"
+    content="Best physiotherapist in Surat. Specialized in treating Back Pain, Tennis Elbow Lumbar Radiculopathy ,Neck Pain (Cervical Radiculopathy) ,Sciatica Treatment ,Frozen Shoulder, Knee Pain & ACL/PCL Injuries" />
+  <meta property="og:url" content="https://priyaphysio.co.in/" />
+  <meta property="og:image" content="https://priyaphysio.co.in/preview2.png" />
+  <meta property="og:type" content="website" />
+  <title>Dr. Priya Nathani (PT) - Expert Physiotherapist</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://priyaphysio.co.in/favicon.ico" />
+  <link rel="icon" sizes="16x16" href="https://priyaphysio.co.in/favicon2.png" />
+  <link rel="icon" sizes="192x192" href="https://priyaphysio.co.in/logo192.png" />
+  <meta name="msapplication-TileImage" content="https://priyaphysio.co.in/logo192.png" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      /* background: rgba(46, 134, 171, 0.95);
+        backdrop-filter: blur(10px); */
+      background: rgba(46, 134, 171, 0.542);
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+    }
+
+    /* .navbar {
+        z-index: 999;
+        background: rgba(42, 42, 42, 0.342);
+        -webkit-backdrop-filter: blur(24px);
+        backdrop-filter: blur(24px);
+        border-radius: 100px;
+        align-items: center;
+        width: auto;
+        max-width: 1200px;
+        margin-left: 7%;
+        margin-right: 7%;
+        padding: 1rem 0;
+        display: flex;
+        position: fixed;
+        inset: 10px 0 auto;
+        transition: all 0.3s ease;
+      } */
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: -86px;
+    }
+
+    .logo img {
+      height: 5.6rem;
+      margin: -21px;
+      margin-bottom: -28px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #a8e6cf;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #2e86ab 0%, #a23b72 100%);
+      color: white;
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill="rgba(255,255,255,0.1)"></path></svg>');
+      background-size: cover;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: center;
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .doctor-photo {
+      width: 280px;
+      height: 350px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      animation: fadeInRight 1s ease 0.4s both;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .cta-button:hover {
+      background: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #2e86ab;
+      margin-bottom: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-height: 600px;
+      overflow-y: auto;
+      padding: 1rem;
+      scrollbar-width: thin;
+      scrollbar-color: #2e86ab #f1f1f1;
+    }
+
+    .services-grid::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .services-grid::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .services-grid::-webkit-scrollbar-thumb {
+      background: #2e86ab;
+      border-radius: 10px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border-left: 5px solid #2e86ab;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card h3 {
+      color: #2e86ab;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-list li {
+      padding: 0.3rem 0;
+      color: #666;
+    }
+
+    .service-list li::before {
+      content: '✓';
+      color: #28a745;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128c7e;
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image {
+      text-align: center;
+    }
+
+    .about-photo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #2e86ab;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .credentials {
+      background: linear-gradient(135deg, #2e86ab, #a23b72);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 2rem;
+    }
+
+    .credentials h3 {
+      margin-bottom: 1rem;
+    }
+
+    .credentials ul {
+      list-style: none;
+    }
+
+    .credentials li {
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .credentials li::before {
+      content: '🏆';
+      position: absolute;
+      left: 0;
+    }
+
+    /* Testimonials */
+    /* .testimonials {
+        padding: 80px 0;
+        background: #f8f9fa;
+      }
+
+      .testimonial-slider {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 15px;
+      }
+
+      .testimonial-container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .testimonial-card {
+        min-width: 100%;
+        background: white;
+        padding: 3rem;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+        border: 3px solid #2e86ab;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: #666;
+      } */
+
+    /* Testimonials Section */
+    #testimonials {
+      background: white;
+      color: #004b8d;
+    }
+
+    #testimonials .section-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .testimonial-card {
+      flex: 0 0 auto;
+      width: 180px;
+      /* fixed width for mobile */
+      scroll-snap-align: center;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 75, 141, 0.15);
+      padding: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-img {
+      width: 100%;
+      max-height: 270px;
+      /* portrait ratio approx 180x270 */
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #003366;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* Video Testimonial */
+    .video-card {
+      position: relative;
+      width: 220px;
+      height: 340px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      flex-shrink: 0;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .play-icon {
+      width: 64px;
+      height: 64px;
+      pointer-events: none;
+    }
+
+    /* Scrollbar hidden for smooth UI */
+    .testimonial-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial-slider {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: #2e86ab;
+    }
+
+    .slider-nav {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .slider-btn {
+      background: #2e86ab;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slider-btn:hover {
+      background: #a23b72;
+      transform: scale(1.1);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #2e86ab, #a23b72);
+      color: white;
+      text-align: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-card i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #a8e6cf;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+      animation: pulse 2s infinite;
+      z-index: 1000;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0px;
+        margin-left: -21%;
+        /* margin-left: 4px;
+          margin-right: 4px; */
+      }
+
+      .logo img {
+        height: 4rem;
+        margin-top: -7px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -28px;
+      }
+
+      .credentials {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        z-index: 1000;
+        background: rgba(46, 134, 171, 0.542);
+        backdrop-filter: blur(24px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+      }
+
+      .nav-menu.active {
+        z-index: 1000;
+        background: rgba(22, 72, 94, 0.755);
+        backdrop-filter: blur(24px);
+        left: 0;
+        margin-top: 20px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      .hero-text h1 {
+        font-size: 1.5rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        max-height: 500px;
+      }
+
+      .doctor-photo {
+        width: 250px;
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="logo.png" alt="Dr Priya Physio & Fitness" />
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Expert Physiotherapy Care</h1>
+          <p>
+            Licensed Physiotherapist & Certified Pilates Instructor
+            specializing in Neurological, Orthopedic & Cardio-Pulmonary
+            Rehabilitation
+          </p>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20would%20like%20to%20book%20a%20physiotherapy%20consultation"
+            class="cta-button">
+            <i class="fab fa-whatsapp"></i> Book Consultation
+          </a>
+        </div>
+        <div class="hero-image">
+          <img src="elon_musk.webp" alt="Dr. Priya Nathani" class="doctor-photo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Comprehensive Physiotherapy & Rehabilitation Services</p>
+      </div>
+      <div class="services-grid">
+        <!-- Neurological Rehabilitation -->
+        <div class="service-card">
+          <h3><i class="fas fa-brain"></i> Neurological Rehabilitation</h3>
+          <ul class="service-list">
+            <li>Paralysis Recovery</li>
+            <li>Stroke Rehabilitation</li>
+            <li>Guillain Barre Syndrome</li>
+            <li>Multiple Sclerosis</li>
+            <li>Cerebral Palsy</li>
+            <li>Down Syndrome</li>
+            <li>Parkinson's Disease</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20neurological%20physiotherapy%20treatment"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Get Neurological Care
+          </a>
+        </div>
+
+        <!-- Orthopedic Treatment -->
+        <div class="service-card">
+          <h3><i class="fas fa-bone"></i> Orthopedic Treatment</h3>
+          <ul class="service-list">
+            <li>Back Pain (Lumbar Radiculopathy)</li>
+            <li>Neck Pain (Cervical Radiculopathy)</li>
+            <li>Sciatica Treatment</li>
+            <li>Frozen Shoulder</li>
+            <li>Tennis Elbow</li>
+            <li>Knee Pain & ACL/PCL Injuries</li>
+            <li>Joint Replacement Rehabilitation</li>
+            <li>Carpal Tunnel Syndrome</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20orthopedic%20physiotherapy%20treatment"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Book Orthopedic Care
+          </a>
+        </div>
+
+        <!-- Cardio-Pulmonary -->
+        <div class="service-card">
+          <h3>
+            <i class="fas fa-heartbeat"></i> Cardio-Pulmonary Rehabilitation
+          </h3>
+          <ul class="service-list">
+            <li>Post Angioplasty Rehabilitation</li>
+            <li>Post Open Heart Surgery Recovery</li>
+            <li>Asthma Management</li>
+            <li>Lung Fibrosis Treatment</li>
+            <li>Cardiac Conditions Rehabilitation</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20cardio-pulmonary%20rehabilitation"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Start Cardio Recovery
+          </a>
+        </div>
+
+        <!-- Fitness & Training -->
+        <div class="service-card">
+          <h3><i class="fas fa-dumbbell"></i> Fitness & Pilates Training</h3>
+          <ul class="service-list">
+            <li>General Fitness Training</li>
+            <li>Certified Pilates Instruction</li>
+            <li>Balance Training</li>
+            <li>Strength & Flexibility</li>
+            <li>Cardio Training</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I'm%20interested%20in%20fitness%20training%20and%20Pilates"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Join Fitness Program
+          </a>
+        </div>
+
+        <!-- Specialized Services -->
+        <div class="service-card">
+          <h3><i class="fas fa-user-md"></i> Specialized Services</h3>
+          <ul class="service-list">
+            <li>Pregnancy Fitness (Antenatal/Postnatal)</li>
+            <li>Onco Rehabilitation</li>
+            <li>Post Surgical Rehabilitation</li>
+            <li>Arthritis Management</li>
+            <li>Plantar Fasciitis Treatment</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20specialized%20physiotherapy%20treatment"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Get Specialized Care
+          </a>
+        </div>
+
+        <!-- Treatment Methods -->
+        <div class="service-card">
+          <h3><i class="fas fa-tools"></i> Treatment Methods</h3>
+          <ul class="service-list">
+            <li>Pain Relief Machines (TENS, IFT, Ultrasound)</li>
+            <li>Cupping Therapy</li>
+            <li>Taping Therapy</li>
+            <li>Manual Therapy</li>
+            <li>Exercise Therapy</li>
+          </ul>
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I'd%20like%20to%20know%20about%20your%20treatment%20methods"
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="testimonial-slider">
+        <!-- Image testimonial cards -->
+        <!-- <div class="testimonial-card">
+            <img
+              src="IMG-20250608-WA0004.jpg"
+              alt="Client 1"
+              class="testimonial-img"
+            />
+            <p class="testimonial-text">
+              "Excellent care and professional service. Highly recommend!"
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <img
+              src="IMG-20250608-WA0005.jpg"
+              alt="Client 2"
+              class="testimonial-img"
+            />
+            <p class="testimonial-text">
+              "Dr. Priya helped me recover quickly from my injury."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <img
+              src="IMG-20250608-WA0006.jpg"
+              alt="Client 3"
+              class="testimonial-img"
+            />
+            <p class="testimonial-text">
+              "Friendly and skilled physiotherapist with great home service."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <img
+              src="IMG-20250608-WA0007.jpg"
+              alt="Client 4"
+              class="testimonial-img"
+            />
+            <p class="testimonial-text">
+              "The Pilates sessions improved my balance and strength
+              significantly."
+            </p>
+          </div> -->
+
+        <!-- Video testimonial card -->
+        <div class="testimonial-card video-card">
+          <!-- <video id="testimonialVideo">
+            <source src="https://youtube.com/shorts/W2cSkJlH_S0" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> -->
+          <iframe class="testimonial-card video-card" id="testimonialVideo" src="https://youtube.com/embed/W2cSkJlH_S0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="width:100%; height:100%; border-radius: 16px;"></iframe>
+        </div>
+
+        <div class="testimonial-card video-card">
+          <!-- <video id="testimonialVideo">
+            <source src="https://www.youtube.com/shorts/6jkRaW_Jh04" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> -->
+          <iframe class="testimonial-card video-card" id="testimonialVideo"
+            src="https://www.youtube.com/embed/6jkRaW_Jh04" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="width:100%; height:100%; border-radius: 16px;"></iframe>
+        </div>
+
+        <div class="testimonial-card video-card">
+          <!-- <video id="testimonialVideo">
+            <source src="https://youtube.com/embed/nsswdSP6pHY" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> -->
+          <iframe class="testimonial-card video-card" id="testimonialVideo" src="https://youtube.com/embed/nsswdSP6pHY"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="width:100%; height:100%; border-radius: 16px;"></iframe>
+        </div>
+
+        <!-- <div class="testimonial-card video-card" onclick="playTestimonialVideo()">
+          <video id="testimonialVideo">
+            <source src="vid2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" class="play-icon" viewBox="0 0 64 64" fill="white">
+              <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.5)" />
+              <polygon points="26,20 46,32 26,44" fill="white" />
+            </svg>
+          </div>
+        </div> -->
+
+        <!-- <div class="testimonial-card video-card" onclick="playTestimonialVideo()">
+          <video id="testimonialVideo">
+            <source src="vid3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" class="play-icon" viewBox="0 0 64 64" fill="white">
+              <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.5)" />
+              <polygon points="26,20 46,32 26,44" fill="white" />
+            </svg>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Dr. Priya Nathani</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="drpriya.jpg" alt="Dr. Priya Nathani" class="about-photo" />
+          <div class="credentials">
+            <h3>Qualifications & Certifications</h3>
+            <ul>
+              <li>Bachelor of Physiotherapy</li>
+              <li>Gujarat State Physiotherapy Council Registered</li>
+              <li>
+                Indian Academy Fitness Training Certified Pilates Instructor
+              </li>
+              <li>Member of Indian Academy of Fitness Training</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-content">
+          <h4>Specializations:</h4>
+          <p>
+            Dr. Priya specializes in treating complex neurological conditions
+            including stroke rehabilitation, Parkinson's disease, and multiple
+            sclerosis. Her orthopedic expertise covers everything from sports
+            injuries to post-surgical rehabilitation, while her
+            cardio-pulmonary rehabilitation helps patients recover from heart
+            surgeries and manage respiratory conditions.
+          </p>
+          <br />
+
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I'd%20like%20to%20schedule%20a%20consultation"
+            class="cta-button">
+            Schedule Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Dr. Priya Nathani</h2>
+        <p>Ready to start your recovery journey?</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp Consultation</h3>
+          <p>Quick and easy booking</p>
+          <br />
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20would%20like%20to%20book%20a%20consultation"
+            class="whatsapp-btn">Chat Now</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <h3>Phone</h3>
+          <p>+91 70697 42782</p>
+          <p>Available during visiting hours</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-clock"></i>
+          <h3>Visiting Hours</h3>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-home"></i>
+          <h3>Home Visits</h3>
+          <p>Available for mobility-restricted patients</p>
+          <br />
+          <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20a%20home%20visit%20for%20physiotherapy"
+            class="whatsapp-btn">Request Visit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20need%20physiotherapy%20help" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // Mobile Navigation
+    const hamburger = document.getElementById('hamburger')
+    const navMenu = document.getElementById('nav-menu')
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active')
+    })
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navMenu.classList.toggle('active')
+      })
+    })
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+        })
+      })
+    })
+
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form')
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault()
+
+        // Get form data
+        const formData = new FormData(this)
+        const name = formData.get('name')
+        const email = formData.get('email')
+        const message = formData.get('message')
+
+        // Simple validation
+        if (name && email && message) {
+          // Show success message
+          alert("Thank you for your message! We'll get back to you soon.")
+          this.reset()
+        } else {
+          alert('Please fill in all fields.')
+        }
+      })
+    }
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header')
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)'
+        header.style.backdropFilter = 'blur(10px)'
+      } else {
+        header.style.background = 'rgba(255, 255, 255, 0.9)'
+        header.style.backdropFilter = 'blur(5px)'
+      }
+    })
+  </script>
+  <script>
+    function playTestimonialVideo() {
+      const container = event.currentTarget
+      const video = container.querySelector('video')
+      const overlay = container.querySelector('.video-overlay')
+
+      // Pause all other testimonial videos
+      document.querySelectorAll('.video-card').forEach((card) => {
+        const vid = card.querySelector('video')
+        const ovl = card.querySelector('.video-overlay')
+        if (vid !== video) {
+          vid.pause()
+          ovl.style.display = 'flex'
+        }
+      })
+
+      if (video.paused) {
+        video.play()
+        overlay.style.display = 'none'
+      } else {
+        video.pause()
+        overlay.style.display = 'flex'
+      }
+    }
+  </script>
+</body>
+
+</html>

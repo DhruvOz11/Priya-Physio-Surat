@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Priya Physio & Fitness" />
+  <meta property="og:description"
+    content="Best physiotherapist in Surat. Specialized in treating Back Pain, Tennis Elbow Lumbar Radiculopathy, Neck Pain (Cervical Radiculopathy), Sciatica Treatment, Frozen Shoulder, Knee Pain & ACL/PCL Injuries" />
+  <meta property="og:url" content="https://priyaphysio.co.in/" />
+  <meta property="og:image" content="https://priyaphysio.co.in/preview2.png" />
+  <meta property="og:type" content="website" />
+  <title>Dr. Priya Nathani (PT) - Expert Physiotherapist</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #0F2027;
+      /* Deep Luxury Black/Teal */
+      --secondary-color: #203A43;
+      --accent-color: #D4AF37;
+      /* Sophisticated Gold */
+      --text-main: #2C3E50;
+      --text-light: #7F8C8D;
+      --bg-light: #F8F9FA;
+      --white: #ffffff;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Premium Glassmorphism Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 32, 39, 0.8);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      padding: 1.2rem 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .navbar.scrolled {
+      background: rgba(15, 32, 39, 0.95);
+      padding: 0.8rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      color: var(--accent-color);
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+    }
+
+    .nav-menu a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent-color);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 30px;
+      height: 2px;
+      background: var(--white);
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    /* Dynamic Hero Section with Video Background */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: var(--white);
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 0;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(15, 32, 39, 0.9) 0%, rgba(32, 58, 67, 0.7) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 0 2rem;
+      margin-top: 50px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      border: 1px solid var(--accent-color);
+      border-radius: 50px;
+      color: var(--accent-color);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(5px);
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero-content h1 {
+      font-size: 4.5rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent-color);
+      color: var(--primary-color);
+      padding: 18px 40px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .cta-button:hover {
+      background: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Stats Section (Inspired by Spinex Global) */
+    .stats-section {
+      background: var(--white);
+      padding: 60px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .stat-item h3 {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .stat-item p {
+      font-size: 1rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* Common Sections */
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .bg-light {
+      background: var(--bg-light);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .service-list li {
+      padding: 0.5rem 0;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .service-list li i {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-img-wrapper {
+      position: relative;
+    }
+
+    .about-img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--accent-color);
+      z-index: -1;
+      border-radius: 8px;
+    }
+
+    .about-photo {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    /* Grids & Interactive Images */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .img-card {
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .img-card::after {
+      content: '\f065';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      color: var(--white);
+      font-size: 2rem;
+      transition: transform 0.3s ease;
+      z-index: 2;
+    }
+
+    .img-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 32, 39, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .img-card:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .img-card:hover::before {
+      opacity: 1;
+    }
+
+    .img-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      display: block;
+    }
+
+    .img-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Custom Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 32, 39, 0.95);
+      backdrop-filter: blur(10px);
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 4px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .lightbox-modal.active .lightbox-content {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: var(--white);
+      font-size: 40px;
+      font-weight: 300;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      background: none;
+      border: none;
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent-color);
+    }
+
+    /* Testimonials */
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem 0 2rem;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .testimonial-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .video-card {
+      flex: 0 0 auto;
+      width: 320px;
+      height: 500px;
+      scroll-snap-align: center;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: var(--white);
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-photo {
+        height: 500px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(15, 32, 39, 0.98);
+        width: 100%;
+        height: calc(100vh - 70px);
+        transition: 0.4s ease-in-out;
+        gap: 2.5rem;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-menu a {
+        font-size: 1.5rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo serif">Dr. Priya</a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Specialties</a></li>
+        <li><a href="#about">The Doctor</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-receiving-a-massage-on-her-back-42781-large.mp4"
+        type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Surat's Premier Clinic</span>
+      <h1 class="serif">Movement. Restored.</h1>
+      <p>Licensed Physiotherapist & Certified Pilates Instructor specializing in high-end Neurological, Orthopedic &
+        Cardio-Pulmonary Rehabilitation.</p>
+      <a href="https://wa.me/917069742782?text=Hi%20Dr.%20Priya,%20I%20would%20like%20to%20book%20a%20private%20consultation"
+        class="cta-button">
+        Book Private Consultation <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3 class="serif">10+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="serif">5,000+</h3>
+        <p>Satisfied Patients</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="serif">100%</h3>
+        <p>Personalized Care</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="serif">4.9</h3>
+        <p>Google Rating</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrapper">
+          <img src="https://i.ibb.co/LD8QRnHC/2025-11-17.jpg" alt="Dr. Priya Nathani" class="about-photo" />
+        </div>
+        <div class="about-content">
+          <h2 class="serif">Meet Dr. Priya Nathani</h2>
+          <p>
+            Dr. Priya specializes in treating complex neurological conditions including stroke rehabilitation,
+            Parkinson's disease, and multiple sclerosis. Her orthopedic expertise covers everything from sports injuries
+            to post-surgical rehabilitation, while her cardio-pulmonary rehabilitation helps patients recover from heart
+            surgeries and manage respiratory conditions.
+          </p>
+          <p>
+            As a Gujarat State Physiotherapy Council Registered professional and a Certified Pilates Instructor, she
+            bridges the gap between medical rehabilitation and holistic fitness.
+          </p>
+          <br>
+          <a href="https://wa.me/917069742782" class="cta-button"
+            style="background: var(--primary-color); color: var(--white);">
+            Contact Directly
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery section-padding bg-light" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="serif">Clinic Gallery</h2>
+        <p>Glimpses of our state-of-the-art facility and patient events.</p>
+      </div>
+      <div class="image-grid">
+        <div class="img-card"><img src="https://i.ibb.co/0jdxspzy/Whats-App-Image-2026-03-29-at-10-57-29-PM.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/fG1jjj2Y/Whats-App-Image-2026-03-29-at-10-57-30-PM-1.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/mVbDtvym/Whats-App-Image-2026-03-29-at-10-57-30-PM-2.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/99mHQnhk/Whats-App-Image-2026-03-29-at-10-57-30-PM.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/TMNhLK0K/Whats-App-Image-2026-03-29-at-10-57-34-PM-1.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/W4GKfNnv/Whats-App-Image-2026-03-29-at-10-57-34-PM-2.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/yDwDvpV/Whats-App-Image-2026-03-29-at-10-57-35-PM.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/DgkrY11c/Whats-App-Image-2026-03-30-at-1-48-04-AM.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/27Lzkcpd/Whats-App-Image-2026-03-30-at-1-48-10-AM.jpg"
+            alt="Gallery Image"></div>
+        <div class="img-card"><img src="https://i.ibb.co/674dFmNY/Whats-App-Image-2026-03-29-at-10-57-28-PM.jpg"
+            alt="Gallery Image"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="certificates section-padding" id="certificates">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="serif">Credentials & Certifications</h2>
+        <p>Continuous education and professional excellence.</p>
+      </div>
+      <div class="image-grid">
+        <div class="img-card"><img src="https://i.ibb.co/LD8QRnHC/2025-11-17.jpg" alt="Certificate"></div>
+        <div class="img-card"><img src="https://i.ibb.co/MyrbbRJt/Whats-App-Image-2026-03-30-at-1-48-10-AM-1.jpg"
+            alt="Certificate"></div>
+        <div class="img-card"><img src="https://i.ibb.co/ycxtd8jy/Whats-App-Image-2026-03-30-at-1-48-11-AM-1.jpg"
+            alt="Certificate"></div>
+        <div class="img-card"><img src="https://i.ibb.co/YB6kSpHX/Whats-App-Image-2026-03-30-at-1-48-11-AM.jpg"
+            alt="Certificate"></div>
+        <div class="img-card"><img src="https://i.ibb.co/Kpk3r84D/2025-08-30.jpg" alt="Certificate"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="serif">Patient Stories</h2>
+      </div>
+      <div class="testimonial-slider">
+        <div class="video-card">
+          <iframe src="https://youtube.com/embed/W2cSkJlH_S0" frameborder="0" allowfullscreen
+            style="width:100%; height:100%;"></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/6jkRaW_Jh04" frameborder="0" allowfullscreen
+            style="width:100%; height:100%;"></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://youtube.com/embed/nsswdSP6pHY" frameborder="0" allowfullscreen
+            style="width:100%; height:100%;"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img src="" alt="Enlarged View" class="lightbox-content" id="lightboxImage">
+  </div>
+
+  <a href="https://wa.me/917069742782" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    // Navbar Scroll & Mobile Toggle
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Custom Interactive Lightbox Logic
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('lightboxClose');
+    const allGalleryImages = document.querySelectorAll('.img-card img');
+
+    const closeModal = () => {
+      modal.classList.remove('active');
+      // Remove hash from URL silently
+      history.replaceState(null, null, ' ');
+    };
+
+    const openModal = (src) => {
+      modalImg.src = src;
+      modal.classList.add('active');
+      // Push state to browser history for mobile back-button support
+      history.pushState({ modalOpen: true }, null, '#image-view');
+    };
+
+    allGalleryImages.forEach(img => {
+      img.parentElement.addEventListener('click', () => openModal(img.src));
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close when clicking outside the image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Magic trick: Close on mobile Back button
+    window.addEventListener('popstate', () => {
+      if (modal.classList.contains('active')) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
